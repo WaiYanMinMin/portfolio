@@ -2,6 +2,7 @@
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
+import { ThemeToggle } from "./ThemeToggle";
 
 // Navigation menu items - customize these links
 const navItems = [
@@ -29,14 +30,14 @@ export const Navbar = () => {
   // Prevent body scrolling when mobile menu is open
   useEffect(() => {
     if (isMenuOpen) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = '';
+      document.body.style.overflow = "";
     }
-    
+
     // Cleanup: restore scrolling when component unmounts
     return () => {
-      document.body.style.overflow = '';
+      document.body.style.overflow = "";
     };
   }, [isMenuOpen]);
 
@@ -45,41 +46,52 @@ export const Navbar = () => {
       <nav
         className={cn(
           "fixed w-full z-40 transition-all duration-300",
-          isScrolled ? "py-3 bg-background/80 backdrop-blur-md shadow-xs" : "py-5"
+          isScrolled
+            ? "py-3 bg-background/80 backdrop-blur-md shadow-xs"
+            : "py-5"
         )}
       >
-        <div className="container flex items-center justify-between">
-          {/* Logo/Brand name - customize this */}
+        <div className="container flex items-center">
+          {/* Logo/Brand name - left */}
           <a
             className="text-xl font-bold text-primary flex items-center"
             href="#hero"
           >
             <span className="relative z-10">
-              <span className="text-glow text-foreground">Wai Yan's</span> Portfolio
+              <span className="text-glow text-foreground">Wai Yan's</span>{" "}
+              Portfolio
             </span>
           </a>
 
-          {/* Desktop navigation menu */}
-          <div className="hidden md:flex space-x-8">
-            {navItems.map((item, key) => (
-              <a
-                key={key}
-                href={item.href}
-                className="text-foreground/80 hover:text-primary transition-colors duration-300"
-              >
-                {item.name}
-              </a>
-            ))}
+          {/* Desktop navigation menu - centered */}
+          <div className="flex-1 flex justify-center">
+            <div className="hidden md:flex space-x-8">
+              {navItems.map((item, key) => (
+                <a
+                  key={key}
+                  href={item.href}
+                  className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                >
+                  {item.name}
+                </a>
+              ))}
+            </div>
           </div>
 
-          {/* Mobile menu button */}
-          <button
-            onClick={() => setIsMenuOpen((prev) => !prev)}
-            className="md:hidden p-2 text-foreground z-[60] relative"
-            aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          {/* Right side: theme toggle and mobile menu */}
+          <div className="flex items-center space-x-4">
+            {/* Theme toggle */}
+            <ThemeToggle />
+
+            {/* Mobile menu button */}
+            <button
+              onClick={() => setIsMenuOpen((prev) => !prev)}
+              className="md:hidden p-2 text-foreground z-[60] relative"
+              aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
+            >
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
       </nav>
 
@@ -93,9 +105,9 @@ export const Navbar = () => {
             : "opacity-0 pointer-events-none"
         )}
         style={{
-          backgroundColor: 'hsl(var(--background) / 0.4)',
-          backdropFilter: 'blur(8px)',
-          WebkitBackdropFilter: 'blur(8px)'
+          backgroundColor: "hsl(var(--background) / 0.4)",
+          backdropFilter: "blur(8px)",
+          WebkitBackdropFilter: "blur(8px)",
         }}
       >
         <div className="flex flex-col space-y-8 text-xl">
@@ -114,4 +126,3 @@ export const Navbar = () => {
     </>
   );
 };
-

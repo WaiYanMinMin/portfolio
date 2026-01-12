@@ -86,10 +86,10 @@ export const AboutSection = () => {
               Get In Touch
             </a>
             <a
-              href="#"
+              href="https://drive.google.com/file/d/1w1Ju7Zt5unm6pgFylSWUy-eN8JbCjftO/view?usp=sharing"
               className="px-6 py-3 rounded-full border-2 border-primary/50 text-primary hover:bg-primary/10 transition-all duration-300 hover:border-primary"
             >
-              Download CV
+              Download resume
             </a>
           </div>
         </div>
