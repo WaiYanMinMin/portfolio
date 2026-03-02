@@ -1,52 +1,62 @@
-// Skills section - showcase your technical skills
+// Skills section - showcase your technical skills with sliding marquee
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 
 // Customize these skills with your own!
-// Change the name, level (0-100), and category
 const skills = [
   // Data Science skills
-  { name: "Python", level: 95, category: "data-science" },
-  { name: "Machine Learning", level: 90, category: "data-science" },
-  { name: "Deep Learning", level: 90, category: "data-science" },
-  { name: "LLMs", level: 85, category: "data-science" },
-  { name: "Pandas", level: 90, category: "data-science" },
-  { name: "NumPy", level: 90, category: "data-science" },
-  { name: "Scikit-learn", level: 85, category: "data-science" },
-  { name: "Streamlit", level: 85, category: "data-science" },
-  { name: "Matplotlib", level: 85, category: "data-science" },
-  { name: "Seaborn", level: 85, category: "data-science" },
-  { name: "TensorFlow", level: 80, category: "data-science" },
-  { name: "PyTorch", level: 80, category: "data-science" },
+  { name: "Python", category: "data-science" },
+  { name: "Machine Learning", category: "data-science" },
+  { name: "Deep Learning", category: "data-science" },
+  { name: "LLMs", category: "data-science" },
+  { name: "Pandas", category: "data-science" },
+  { name: "NumPy", category: "data-science" },
+  { name: "Scikit-learn", category: "data-science" },
+  { name: "Streamlit", category: "data-science" },
+  { name: "Matplotlib", category: "data-science" },
+  { name: "Seaborn", category: "data-science" },
+  { name: "TensorFlow", category: "data-science" },
+  { name: "PyTorch", category: "data-science" },
 
   // Frontend skills
-  { name: "Flutter", level: 100, category: "frontend" },
-  { name: "HTML", level: 90, category: "frontend" },
-  { name: "CSS", level: 90, category: "frontend" },
-  { name: "Tailwind CSS", level: 50, category: "frontend" },
-  { name: "React.js", level: 50, category: "frontend" },
+  { name: "Flutter", category: "frontend" },
+  { name: "HTML", category: "frontend" },
+  { name: "CSS", category: "frontend" },
+  { name: "Tailwind CSS", category: "frontend" },
+  { name: "React.js", category: "frontend" },
 
   // Backend skills
-  { name: "Flask ", level: 80, category: "backend" },
-  { name: "FastAPI ", level: 75, category: "backend" },
-  { name: "Django ", level: 70, category: "backend" },
-  { name: "SQL", level: 65, category: "backend" },
-  { name: "GraphQL", level: 60, category: "backend" },
-  { name: "RESTful APIs", level: 60, category: "backend" },
-  { name: "WebSockets ", level: 60, category: "backend" },
+  { name: "Flask", category: "backend" },
+  { name: "FastAPI", category: "backend" },
+  { name: "Django", category: "backend" },
+  { name: "SQL", category: "backend" },
+  { name: "GraphQL", category: "backend" },
+  { name: "RESTful APIs", category: "backend" },
+  { name: "WebSockets", category: "backend" },
+
+  // Deployment
+  { name: "AWS", category: "deployment" },
+  { name: "Google Cloud", category: "deployment" },
+  { name: "Azure", category: "deployment" },
+  { name: "Docker", category: "deployment" },
+  { name: "Kubernetes", category: "deployment" },
+  { name: "Terraform", category: "deployment" },
+  { name: "Vercel", category: "deployment" },
+  { name: "Netlify", category: "deployment" },
+  { name: "GitHub Actions", category: "deployment" },
+  { name: "Railway", category: "deployment" },
+  { name: "Heroku", category: "deployment" },
 
   // Tools
-  { name: "Git/GitHub", level: 90, category: "tools" },
-  { name: "Docker", level: 70, category: "tools" },
-  { name: "AWS", level: 70, category: "tools" },
-  { name: "Figma", level: 85, category: "tools" },
-  { name: "VS Code", level: 95, category: "tools" },
-  { name: "Jupyter Notebook", level: 95, category: "tools" },
-  { name: "PowerBI", level: 70, category: "tools" },
-  { name: "Tableau", level: 70, category: "tools" },
+  { name: "Git/GitHub", category: "tools" },
+  { name: "Figma", category: "tools" },
+  { name: "VS Code", category: "tools" },
+  { name: "Jupyter Notebook", category: "tools" },
+  { name: "PowerBI", category: "tools" },
+  { name: "Tableau", category: "tools" },
 ];
 
-const categories = ["all", "data-science", "frontend", "backend", "tools"];
+const categories = ["all", "data-science", "frontend", "backend", "deployment", "tools"];
 
 export const SkillsSection = () => {
   const [activeCategory, setActiveCategory] = useState("all");
@@ -56,8 +66,36 @@ export const SkillsSection = () => {
     (skill) => activeCategory === "all" || skill.category === activeCategory
   );
 
+  // Split into 3 rows (round-robin). For small sets, repeat more so marquee feels full
+  const row0 = filteredSkills.filter((_, i) => i % 3 === 0);
+  const row1 = filteredSkills.filter((_, i) => i % 3 === 1);
+  const row2 = filteredSkills.filter((_, i) => i % 3 === 2);
+  const rows = [row0, row1, row2];
+
+  // Build display array: repeat until at least 18 items per row (avoids sparse look)
+  const minItems = 18;
+  const getDisplaySkills = (rowSkills) => {
+    if (rowSkills.length === 0) return [];
+    const reps = Math.max(2, Math.ceil(minItems / rowSkills.length));
+    return Array(reps)
+      .fill(rowSkills)
+      .flat();
+  };
+
+  // Stagger start, vary speed & alternate direction so rows never all look empty on one side
+  const getRowStyle = (rowSkills, rowIndex) => {
+    const baseDuration = Math.max(rowSkills.length * 2, 20);
+    const durationVariants = [1, 1.15, 0.92];
+    return {
+      width: "max-content",
+      animationDuration: baseDuration * durationVariants[rowIndex] + "s",
+      animationDelay: `-${rowIndex * 7}s`,
+      animationDirection: rowIndex === 1 ? "reverse" : "normal",
+    };
+  };
+
   return (
-    <section id="skills" className="py-24 px-4 relative">
+    <section id="skills" className="py-28 md:py-36 px-4 relative overflow-hidden">
       <div className="container mx-auto max-w-6xl">
         {/* Section header */}
         <div className="text-center mb-16">
@@ -67,11 +105,12 @@ export const SkillsSection = () => {
           <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
         </div>
 
-        {/* Category filter buttons - Pill style with icons */}
-        <div className="flex flex-wrap justify-center gap-3 mb-16">
-          {categories.map((category, key) => (
+        {/* Category filter buttons */}
+        <div className="flex flex-wrap justify-center gap-3 mb-12">
+          {categories.map((category) => (
             <button
-              key={key}
+              type="button"
+              key={category}
               onClick={() => setActiveCategory(category)}
               className={cn(
                 "px-6 py-3 rounded-full font-medium transition-all duration-300 capitalize",
@@ -85,51 +124,36 @@ export const SkillsSection = () => {
           ))}
         </div>
 
-        {/* Skills grid - Card style with circular badges */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
-          {filteredSkills.map((skill, key) => (
-            <div
-              key={key}
-              className="bg-card p-6 rounded-2xl shadow-md border border-border/50 hover:shadow-xl hover:border-primary/30 transition-all duration-300 hover:-translate-y-1 flex flex-col items-center text-center group"
-            >
-              {/* Skill name */}
-              <h3 className="font-semibold text-sm mb-4 group-hover:text-primary transition-colors line-clamp-2">
-                {skill.name}
-              </h3>
-              
-              {/* Circular progress indicator */}
-              <div className="relative w-20 h-20 mb-4">
-                <svg className="transform -rotate-90 w-20 h-20">
-                  <circle
-                    cx="40"
-                    cy="40"
-                    r="36"
-                    stroke="currentColor"
-                    strokeWidth="6"
-                    fill="none"
-                    className="text-secondary/30"
-                  />
-                  <circle
-                    cx="40"
-                    cy="40"
-                    r="36"
-                    stroke="currentColor"
-                    strokeWidth="6"
-                    fill="none"
-                    strokeDasharray={`${2 * Math.PI * 36}`}
-                    strokeDashoffset={`${2 * Math.PI * 36 * (1 - skill.level / 100)}`}
-                    className="text-primary transition-all duration-1000"
-                    strokeLinecap="round"
-                  />
-                </svg>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-lg font-bold text-primary">
-                    {skill.level}%
-                  </span>
+        {/* Sliding marquee - 3 rows, text fades to transparent at edges */}
+        <div
+          key={activeCategory}
+          className="relative w-full overflow-hidden py-8 min-h-[280px] md:min-h-[340px]"
+          style={{
+            maskImage:
+              "linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)",
+            WebkitMaskImage:
+              "linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)",
+          }}
+        >
+          <div className="overflow-hidden space-y-6 md:space-y-8">
+            {rows.map((rowSkills, rowIndex) => (
+              <div key={rowIndex} className="overflow-hidden">
+                <div
+                  className="flex animate-marquee-right gap-8 md:gap-12 py-3"
+                  style={getRowStyle(rowSkills, rowIndex)}
+                >
+                  {[...getDisplaySkills(rowSkills), ...getDisplaySkills(rowSkills)].map((skill, key) => (
+                    <span
+                      key={key}
+                      className="flex-shrink-0 font-semibold text-lg md:text-xl text-foreground/90 hover:text-primary transition-colors whitespace-nowrap"
+                    >
+                      {skill.name}
+                    </span>
+                  ))}
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
