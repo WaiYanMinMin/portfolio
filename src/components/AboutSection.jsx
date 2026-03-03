@@ -18,22 +18,22 @@ export const AboutSection = () => {
           {/* Intro text */}
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <h3 className="text-3xl md:text-4xl font-bold">
-              Data Science Student & Mobile Developer
+              Data Scientist & Mobile Developer
             </h3>
             <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
               <p>
-                I'm a data science student with hands-on experience in multiple
-                projects, combining analytical thinking with practical
-                development skills. With over 2 years of professional experience
-                as a cross-platform mobile developer, I bring a unique perspective
-                to solving complex problems.
+                I'm a Data Scientist and cross-platform mobile developer with
+                professional experience across data analysis, ML, and product
+                development. I've worked as a Data Scientist (B8 ICT), Flutter
+                Developer (Timeworld), Frontend Developer (Mom&Pop), and Junior
+                Data Analyst (Pixora Lab)—combining data-driven insights with
+                hands-on building.
               </p>
               <p>
-                I'm passionate about leveraging data to create meaningful insights
-                and building innovative mobile applications that deliver seamless
-                user experiences across different platforms. I'm constantly
-                exploring new technologies and methodologies to stay at the
-                forefront of both data science and mobile development.
+                I focus on turning data into clear narratives and dashboards, and
+                on building mobile and web apps that users rely on. I'm at home
+                with Python, SQL, Flutter, and modern frontend tools, and I care
+                about clean code, solid analytics, and shipping things that work.
               </p>
             </div>
           </div>

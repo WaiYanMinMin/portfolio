@@ -17,7 +17,7 @@ export const Home = () => {
 
       {/* Navigation bar */}
       <Navbar />
-      
+
       {/* Main content sections */}
       <main>
         <HeroSection />
@@ -33,4 +33,3 @@ export const Home = () => {
     </div>
   );
 };
-
