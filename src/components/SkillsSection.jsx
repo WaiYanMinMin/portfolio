@@ -9,6 +9,8 @@ const skills = [
   { name: "Machine Learning", category: "data-science" },
   { name: "Deep Learning", category: "data-science" },
   { name: "LLMs", category: "data-science" },
+  { name: "Langchain", category: "data-science" },
+  { name: "RAG", category: "data-science" },
   { name: "Pandas", category: "data-science" },
   { name: "NumPy", category: "data-science" },
   { name: "Scikit-learn", category: "data-science" },
@@ -49,6 +51,7 @@ const skills = [
 
   // Tools
   { name: "Git/GitHub", category: "tools" },
+  { name: "n8n", category: "tools" },
   { name: "Figma", category: "tools" },
   { name: "VS Code", category: "tools" },
   { name: "Jupyter Notebook", category: "tools" },

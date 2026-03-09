@@ -30,10 +30,11 @@ export const AboutSection = () => {
                 hands-on building.
               </p>
               <p>
-                I focus on turning data into clear narratives and dashboards, and
-                on building mobile and web apps that users rely on. I'm at home
-                with Python, SQL, Flutter, and modern frontend tools, and I care
-                about clean code, solid analytics, and shipping things that work.
+                I focus on turning data into clear narratives and dashboards,
+                and on building mobile and web apps that users rely on. I'm at
+                home with Python, SQL, Flutter, and modern frontend tools, and I
+                care about clean code, solid analytics, and shipping things that
+                work.
               </p>
             </div>
           </div>
@@ -47,12 +48,12 @@ export const AboutSection = () => {
                 </div>
                 <h4 className="font-bold text-xl">Data Science</h4>
                 <p className="text-muted-foreground">
-                  Analyzing complex datasets and building predictive models
-                  to extract actionable insights.
+                  Analyzing complex datasets and building predictive models to
+                  extract actionable insights.
                 </p>
               </div>
             </div>
-            
+
             <div className="bg-card p-8 rounded-2xl shadow-lg border-t-4 border-primary/50 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
               <div className="flex flex-col items-center text-center space-y-4">
                 <div className="p-4 rounded-2xl bg-primary/10 w-fit">
@@ -65,7 +66,7 @@ export const AboutSection = () => {
                 </p>
               </div>
             </div>
-            
+
             <div className="bg-card p-8 rounded-2xl shadow-lg border-t-4 border-primary/50 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
               <div className="flex flex-col items-center text-center space-y-4">
                 <div className="p-4 rounded-2xl bg-primary/10 w-fit">
@@ -73,8 +74,8 @@ export const AboutSection = () => {
                 </div>
                 <h4 className="font-bold text-xl">Project Experience</h4>
                 <p className="text-muted-foreground">
-                  Delivering multiple successful projects with focus on
-                  quality, performance, and user satisfaction.
+                  Delivering multiple successful projects with focus on quality,
+                  performance, and user satisfaction.
                 </p>
               </div>
             </div>
@@ -86,7 +87,7 @@ export const AboutSection = () => {
               Get In Touch
             </a>
             <a
-              href="https://drive.google.com/file/d/1w1Ju7Zt5unm6pgFylSWUy-eN8JbCjftO/view?usp=sharing"
+              href="https://drive.google.com/drive/folders/1a8bLr6OSUUTC8awLUdhRC8aM0TTFCQE1?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3 rounded-full border-2 border-primary/50 text-primary hover:bg-primary/10 transition-all duration-300 hover:border-primary"

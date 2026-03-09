@@ -5,6 +5,15 @@ import { ArrowRight, Code, ExternalLink, Github } from "lucide-react";
 // Add your project images to public/projects/ folder
 const projects = [
   {
+    id: 6,
+    title: "GitHub Issue Analysis and Automation (n8n)",
+    description:
+      "Automated workflow using n8n to assess incoming GitHub issues, analyze them with Langchain-defined templates, and send email notifications. Backend deployed on Railway with Docker. Streamlined internal workflows and saved significant time.",
+    image: "/projects/n8n.png",
+    tags: ["n8n", "Langchain", "Docker", "Railway", "Automation"],
+    githubUrl: "https://github.com/WaiYanMinMin/ai_github_automated_incident_report",
+  },
+  {
     id: 5,
     title: "SG Jobs Market Analysis Dashboard",
     description:
