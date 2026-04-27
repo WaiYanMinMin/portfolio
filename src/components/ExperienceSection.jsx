@@ -22,12 +22,7 @@ const jobs = [
     period: "Jun 2024 – Jan 2025",
     remote: true,
   },
-  {
-    role: "Data Scientist",
-    company: "B8 ICT solution",
-    period: "Jan 2025 – Feb 2026",
-    remote: true,
-  },
+  
 ];
 
 const staggerDelays = [0.1, 0.25, 0.4, 0.55];
