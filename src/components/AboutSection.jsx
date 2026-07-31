@@ -86,8 +86,8 @@ export const AboutSection = () => {
               Get In Touch
             </a>
             <a
-              href="/Wai-Yan-Min-Min-Resume.docx"
-              download="Wai-Yan-Min-Min-Resume.docx"
+              href="/Wai-Yan-Min-Min-Resume.pdf"
+              download="Wai-Yan-Min-Min-Resume.pdf"
               className="px-6 py-3 rounded-full border-2 border-primary/50 text-primary hover:bg-primary/10 transition-all duration-300 hover:border-primary"
             >
               Download resume
