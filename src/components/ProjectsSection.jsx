@@ -6,11 +6,19 @@ import { ArrowRight, Code, ExternalLink, Github } from "lucide-react";
 const projects = [
   {
     id: 7,
-    title: "Cross-Platform Fashion Ecommerce",
+    title: "Cross-Platform Ecommerce Web App with Admin Panel (iOS, Android, Web)",
     description:
-      "In progress (June 2026 – Present). React Native ecommerce app for Android, iOS, and web with Convex as the realtime backend. Planned features: core shop flows (catalog, cart, checkout), direct messaging between shoppers and clothing stores, brand-owner order tracking and dashboards, plus standard ecommerce tooling.",
+      "React Native ecommerce app for Android, iOS, and web with Convex as the realtime backend. Features: core shop flows (catalog, cart, checkout), direct messaging between shoppers and clothing stores, brand-owner order tracking and admin dashboards, plus standard ecommerce tooling.",
     image: "/projects/ecommerce.png",
-    tags: ["React Native", "Convex", "Realtime", "Ecommerce", "iOS", "Android", "Web"],
+    tags: [
+      "React Native",
+      "Convex",
+      "Realtime",
+      "Ecommerce",
+      "iOS",
+      "Android",
+      "Web",
+    ],
   },
   {
     id: 6,
@@ -19,7 +27,8 @@ const projects = [
       "AI agent workflow that triages GitHub issues with Langchain templates, then routes notifications automatically. Deployed on Railway with Docker — a production LLM automation loop that cuts manual triage time.",
     image: "/projects/n8n.png",
     tags: ["n8n", "Langchain", "LLMs", "Docker", "Railway"],
-    githubUrl: "https://github.com/WaiYanMinMin/ai_github_automated_incident_report",
+    githubUrl:
+      "https://github.com/WaiYanMinMin/ai_github_automated_incident_report",
   },
   {
     id: 5,
@@ -66,7 +75,7 @@ const projects = [
       "Computer vision project using CIFAR-10 dataset to classify and label animals using machine learning and deep learning techniques. Includes object detection capabilities.",
     image: "/projects/colab.png", // Add your image here
     tags: ["Python", "TensorFlow", "OpenCV", "Deep Learning"],
-    
+
     githubUrl: "https://github.com/WaiYanMinMin/ComputerVision_CIFAR-10",
     colabUrl:
       "https://colab.research.google.com/drive/1r02RIS73NVzVD08zveSm3W3h11DByEKA",
@@ -97,8 +106,8 @@ export const ProjectsSection = () => {
           <div className="w-24 h-1 bg-primary mx-auto rounded-full mb-6"></div>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             Featured work spanning LLM automation, ML backends, intelligent
-            dashboards, and full-stack apps — end-to-end systems that put AI into
-            real products.
+            dashboards, and full-stack apps — end-to-end systems that put AI
+            into real products.
           </p>
         </div>
 
@@ -109,7 +118,7 @@ export const ProjectsSection = () => {
             return (
               <div
                 key={key}
-                className={`flex flex-col ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'} gap-8 items-stretch bg-card rounded-3xl overflow-hidden shadow-lg border border-border/50 hover:shadow-2xl transition-all duration-300`}
+                className={`flex flex-col ${isEven ? "md:flex-row" : "md:flex-row-reverse"} gap-8 items-stretch bg-card rounded-3xl overflow-hidden shadow-lg border border-border/50 hover:shadow-2xl transition-all duration-300`}
               >
                 {/* Project image - Half width */}
                 <div className="w-full md:w-1/2 overflow-hidden bg-secondary/40 min-h-[220px] md:min-h-0">
@@ -130,8 +139,10 @@ export const ProjectsSection = () => {
                     {key + 1}
                   </div>
 
-                  <h3 className="text-2xl md:text-3xl font-bold">{project.title}</h3>
-                  
+                  <h3 className="text-2xl md:text-3xl font-bold">
+                    {project.title}
+                  </h3>
+
                   <p className="text-muted-foreground leading-relaxed">
                     {project.description}
                   </p>
@@ -157,7 +168,10 @@ export const ProjectsSection = () => {
                         className="flex items-center gap-2 px-3 py-2 sm:px-4 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors duration-300 text-sm sm:text-base"
                         aria-label={`View ${project.title} demo`}
                       >
-                        <ExternalLink size={16} className="sm:w-[18px] sm:h-[18px]" />
+                        <ExternalLink
+                          size={16}
+                          className="sm:w-[18px] sm:h-[18px]"
+                        />
                         <span>Live Demo</span>
                       </a>
                     )}
@@ -207,4 +221,3 @@ export const ProjectsSection = () => {
     </section>
   );
 };
-
