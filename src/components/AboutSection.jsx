@@ -22,7 +22,7 @@ export const AboutSection = () => {
             </h3>
             <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
               <p>
-                I design and ship AI-powered products end to end — from LLM
+                I design and ship AI-powered products end to end , from LLM
                 workflows, RAG pipelines, and ML backends to the APIs and
                 interfaces users actually touch. My path spans frontend and
                 full-stack roles at Mom&Pop and Pixora Lab, Flutter product work

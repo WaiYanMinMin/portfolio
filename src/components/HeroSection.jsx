@@ -1,5 +1,5 @@
 // Hero section - the first thing visitors see
-import { ArrowDown, Brain, Code, Layers } from "lucide-react";
+import { ArrowDown, Brain, Code, Github, Layers, Linkedin } from "lucide-react";
 
 export const HeroSection = () => {
   return (
@@ -37,11 +37,30 @@ export const HeroSection = () => {
               <a href="#projects" className="cosmic-button">
                 View My Projects
               </a>
-              <a 
-                href="#contact" 
+              <a
+                href="/Wai-Yan-Min-Min-Resume.docx"
+                download="Wai-Yan-Min-Min-Resume.docx"
                 className="px-6 py-3 rounded-full border-2 border-primary/50 text-primary hover:bg-primary/10 transition-all duration-300 hover:border-primary"
               >
-                Get In Touch
+                Download resume
+              </a>
+              <a
+                href="https://www.linkedin.com/in/wai-yan-min-min-0ba7251b1/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 rounded-full border-2 border-primary/50 text-primary hover:bg-primary/10 transition-all duration-300 hover:border-primary"
+                aria-label="LinkedIn"
+              >
+                <Linkedin size={22} />
+              </a>
+              <a
+                href="https://github.com/WaiYanMinMin"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 rounded-full border-2 border-primary/50 text-primary hover:bg-primary/10 transition-all duration-300 hover:border-primary"
+                aria-label="GitHub"
+              >
+                <Github size={22} />
               </a>
             </div>
           </div>
@@ -75,4 +94,3 @@ export const HeroSection = () => {
     </section>
   );
 };
-
