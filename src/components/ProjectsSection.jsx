@@ -5,6 +5,14 @@ import { ArrowRight, Code, ExternalLink, Github } from "lucide-react";
 // Add your project images to public/projects/ folder
 const projects = [
   {
+    id: 7,
+    title: "Cross-Platform Fashion Ecommerce",
+    description:
+      "In progress (June 2026 – Present). React Native ecommerce app for Android, iOS, and web with Convex as the realtime backend. Planned features: core shop flows (catalog, cart, checkout), direct messaging between shoppers and clothing stores, brand-owner order tracking and dashboards, plus standard ecommerce tooling.",
+    image: "/projects/ecommerce.png",
+    tags: ["React Native", "Convex", "Realtime", "Ecommerce", "iOS", "Android", "Web"],
+  },
+  {
     id: 6,
     title: "GitHub Issue Analysis and Automation (n8n)",
     description:
@@ -104,11 +112,14 @@ export const ProjectsSection = () => {
                 className={`flex flex-col ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'} gap-8 items-stretch bg-card rounded-3xl overflow-hidden shadow-lg border border-border/50 hover:shadow-2xl transition-all duration-300`}
               >
                 {/* Project image - Half width */}
-                <div className="w-full md:w-1/2 overflow-hidden">
+                <div className="w-full md:w-1/2 overflow-hidden bg-secondary/40 min-h-[220px] md:min-h-0">
                   <img
                     src={project.image}
                     alt={project.title}
                     className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
+                    onError={(e) => {
+                      e.currentTarget.style.display = "none";
+                    }}
                   />
                 </div>
 
