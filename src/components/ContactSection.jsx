@@ -77,7 +77,8 @@ export const ContactSection = () => {
           </h2>
           <div className="w-24 h-1 bg-primary mx-auto rounded-full mb-6"></div>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Have a project in mind or want to collaborate? Feel free to reach out.
+            Building an AI product or need a full-stack engineer who can ship
+            LLM features end to end? Let's talk.
           </p>
         </div>
 

@@ -8,23 +8,23 @@ const projects = [
     id: 6,
     title: "GitHub Issue Analysis and Automation (n8n)",
     description:
-      "Automated workflow using n8n to assess incoming GitHub issues, analyze them with Langchain-defined templates, and send email notifications. Backend deployed on Railway with Docker. Streamlined internal workflows and saved significant time.",
+      "AI agent workflow that triages GitHub issues with Langchain templates, then routes notifications automatically. Deployed on Railway with Docker — a production LLM automation loop that cuts manual triage time.",
     image: "/projects/n8n.png",
-    tags: ["n8n", "Langchain", "Docker", "Railway", "Automation"],
+    tags: ["n8n", "Langchain", "LLMs", "Docker", "Railway"],
     githubUrl: "https://github.com/WaiYanMinMin/ai_github_automated_incident_report",
   },
   {
     id: 5,
     title: "SG Jobs Market Analysis Dashboard",
     description:
-      "Comprehensive Singapore tech job market analysis dashboard analyzing 2025 market trends. Features major data cleaning and engineering, job clustering using SentenceTransformers and KMeans, and interactive visualizations.",
+      "Interactive Streamlit dashboard of Singapore's 2025 tech job market — data pipelines plus SentenceTransformers and KMeans clustering to surface role patterns and hiring trends.",
     image: "/projects/sgjobs.png", // Add your image here
     tags: [
       "Python",
       "Streamlit",
       "SentenceTransformers",
       "KMeans",
-      "Data Engineering",
+      "Embeddings",
     ],
     demoUrl: "https://sgjobsdashboard.streamlit.app/",
     githubUrl: "https://github.com/WaiYanMinMin/sg_jobs_streamlit",
@@ -35,9 +35,9 @@ const projects = [
     id: 4,
     title: "Resume Screening Backend",
     description:
-      "FastAPI backend for automated resume screening using NLP, ML embeddings, and clustering. Features PDF text extraction, similarity scoring against job descriptions, skill extraction, and candidate ranking.",
+      "Full-stack AI screening system: FastAPI backend with NLP embeddings and clustering for PDF resume parsing, job-match scoring, skill extraction, and ranked shortlists.",
     image: "/projects/resumescreening.png", // Add your image here
-    tags: ["Python", "FastAPI", "NLP", "Clustering", "ML Embeddings"],
+    tags: ["Python", "FastAPI", "NLP", "Embeddings", "ML"],
     demoUrl: "https://golden-blancmange-c1cfb0.netlify.app/",
     githubUrl: "https://github.com/WaiYanMinMin/resume_screening_backend",
   },
@@ -88,9 +88,9 @@ export const ProjectsSection = () => {
           </h2>
           <div className="w-24 h-1 bg-primary mx-auto rounded-full mb-6"></div>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Here are some of my featured projects showcasing my work in data science,
-            machine learning, and mobile app development. Each project demonstrates
-            my skills in solving real-world problems with innovative solutions.
+            Featured work spanning LLM automation, ML backends, intelligent
+            dashboards, and full-stack apps — end-to-end systems that put AI into
+            real products.
           </p>
         </div>
 

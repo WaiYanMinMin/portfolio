@@ -4,62 +4,62 @@ import { cn } from "@/lib/utils";
 
 // Customize these skills with your own!
 const skills = [
-  // Data Science skills
-  { name: "Python", category: "data-science" },
-  { name: "Machine Learning", category: "data-science" },
-  { name: "Deep Learning", category: "data-science" },
-  { name: "LLMs", category: "data-science" },
-  { name: "Langchain", category: "data-science" },
-  { name: "RAG", category: "data-science" },
-  { name: "Pandas", category: "data-science" },
-  { name: "NumPy", category: "data-science" },
-  { name: "Scikit-learn", category: "data-science" },
-  { name: "Streamlit", category: "data-science" },
-  { name: "Matplotlib", category: "data-science" },
-  { name: "Seaborn", category: "data-science" },
-  { name: "TensorFlow", category: "data-science" },
-  { name: "PyTorch", category: "data-science" },
+  // AI / ML skills
+  { name: "Python", category: "ai" },
+  { name: "LLMs", category: "ai" },
+  { name: "Langchain", category: "ai" },
+  { name: "RAG", category: "ai" },
+  { name: "Agents", category: "ai" },
+  { name: "Machine Learning", category: "ai" },
+  { name: "Deep Learning", category: "ai" },
+  { name: "NLP", category: "ai" },
+  { name: "Embeddings", category: "ai" },
+  { name: "Scikit-learn", category: "ai" },
+  { name: "PyTorch", category: "ai" },
+  { name: "TensorFlow", category: "ai" },
+  { name: "Pandas", category: "ai" },
+  { name: "NumPy", category: "ai" },
+  { name: "Streamlit", category: "ai" },
 
   // Frontend skills
-  { name: "Flutter", category: "frontend" },
+  { name: "React.js", category: "frontend" },
+  { name: "JavaScript", category: "frontend" },
+  { name: "TypeScript", category: "frontend" },
+  { name: "Tailwind CSS", category: "frontend" },
   { name: "HTML", category: "frontend" },
   { name: "CSS", category: "frontend" },
-  { name: "Tailwind CSS", category: "frontend" },
-  { name: "React.js", category: "frontend" },
+  { name: "Flutter", category: "frontend" },
 
   // Backend skills
-  { name: "Flask", category: "backend" },
   { name: "FastAPI", category: "backend" },
+  { name: "Flask", category: "backend" },
   { name: "Django", category: "backend" },
+  { name: "Node.js", category: "backend" },
   { name: "SQL", category: "backend" },
-  { name: "GraphQL", category: "backend" },
   { name: "RESTful APIs", category: "backend" },
+  { name: "GraphQL", category: "backend" },
   { name: "WebSockets", category: "backend" },
 
   // Deployment
+  { name: "Docker", category: "deployment" },
   { name: "AWS", category: "deployment" },
   { name: "Google Cloud", category: "deployment" },
   { name: "Azure", category: "deployment" },
-  { name: "Docker", category: "deployment" },
-  { name: "Kubernetes", category: "deployment" },
-  { name: "Terraform", category: "deployment" },
   { name: "Vercel", category: "deployment" },
+  { name: "Railway", category: "deployment" },
   { name: "Netlify", category: "deployment" },
   { name: "GitHub Actions", category: "deployment" },
-  { name: "Railway", category: "deployment" },
-  { name: "Heroku", category: "deployment" },
+  { name: "Kubernetes", category: "deployment" },
 
   // Tools
   { name: "Git/GitHub", category: "tools" },
   { name: "n8n", category: "tools" },
-  { name: "Figma", category: "tools" },
-  { name: "VS Code", category: "tools" },
   { name: "Jupyter Notebook", category: "tools" },
-  { name: "PowerBI", category: "tools" },
-  { name: "Tableau", category: "tools" },
+  { name: "VS Code", category: "tools" },
+  { name: "Figma", category: "tools" },
 ];
 
-const categories = ["all", "data-science", "frontend", "backend", "deployment", "tools"];
+const categories = ["all", "ai", "frontend", "backend", "deployment", "tools"];
 
 export const SkillsSection = () => {
   const [activeCategory, setActiveCategory] = useState("all");

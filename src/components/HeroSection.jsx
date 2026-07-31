@@ -1,5 +1,5 @@
 // Hero section - the first thing visitors see
-import { ArrowDown, Code, Database, Smartphone } from "lucide-react";
+import { ArrowDown, Brain, Code, Layers } from "lucide-react";
 
 export const HeroSection = () => {
   return (
@@ -29,7 +29,7 @@ export const HeroSection = () => {
 
             {/* Subtitle */}
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed opacity-0 animate-fade-in-delay-4 max-w-lg">
-              I'm a passionate Data Scientist with a strong expertise in Machine Learning, Deep Learning and LLMs.
+              Full-Stack AI Engineer building end-to-end products — from LLM agents and RAG systems to scalable APIs and polished web apps.
             </p>
 
             {/* Call-to-action buttons */}
@@ -51,13 +51,13 @@ export const HeroSection = () => {
             <div className="relative w-full aspect-square max-w-md mx-auto">
               {/* Floating icons */}
               <div className="absolute top-0 left-0 p-6 bg-card rounded-2xl shadow-lg border border-border/50 animate-float">
-                <Database className="h-8 w-8 text-primary" />
+                <Brain className="h-8 w-8 text-primary" />
               </div>
               <div className="absolute top-1/2 right-0 p-6 bg-card rounded-2xl shadow-lg border border-border/50 animate-float" style={{ animationDelay: '1s' }}>
                 <Code className="h-8 w-8 text-primary" />
               </div>
               <div className="absolute bottom-0 left-1/4 p-6 bg-card rounded-2xl shadow-lg border border-border/50 animate-float" style={{ animationDelay: '2s' }}>
-                <Smartphone className="h-8 w-8 text-primary" />
+                <Layers className="h-8 w-8 text-primary" />
               </div>
               
               {/* Central gradient circle */}

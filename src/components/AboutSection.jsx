@@ -1,5 +1,5 @@
 // About section - tell visitors about yourself
-import { Briefcase, Smartphone, BarChart } from "lucide-react";
+import { Briefcase, Brain, Layers } from "lucide-react";
 
 export const AboutSection = () => {
   return (
@@ -18,23 +18,22 @@ export const AboutSection = () => {
           {/* Intro text */}
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <h3 className="text-3xl md:text-4xl font-bold">
-              Data Scientist & Mobile Developer
+              Full-Stack AI Engineer
             </h3>
             <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
               <p>
-                I'm a Data Scientist and cross-platform mobile developer with
-                professional experience across data analysis, ML, and product
-                development. I've worked as a Data Scientist (B8 ICT), Flutter
-                Developer (Timeworld), Frontend Developer (Mom&Pop), and Junior
-                Data Analyst (Pixora Lab)—combining data-driven insights with
-                hands-on building.
+                I design and ship AI-powered products end to end — from LLM
+                workflows, RAG pipelines, and ML backends to the APIs and
+                interfaces users actually touch. My path spans frontend and
+                full-stack roles at Mom&Pop and Pixora Lab, Flutter product work
+                at Timeworld, and freelance work shipping AI systems into
+                production.
               </p>
               <p>
-                I focus on turning data into clear narratives and dashboards,
-                and on building mobile and web apps that users rely on. I'm at
-                home with Python, SQL, Flutter, and modern frontend tools, and I
-                care about clean code, solid analytics, and shipping things that
-                work.
+                I work comfortably across Python, FastAPI, React, and modern
+                frontend stacks, and I care about reliable models, clean
+                architecture, and shipping features that hold up in the real
+                world — not just demos.
               </p>
             </div>
           </div>
@@ -44,12 +43,12 @@ export const AboutSection = () => {
             <div className="bg-card p-8 rounded-2xl shadow-lg border-t-4 border-primary/50 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
               <div className="flex flex-col items-center text-center space-y-4">
                 <div className="p-4 rounded-2xl bg-primary/10 w-fit">
-                  <BarChart className="h-8 w-8 text-primary" />
+                  <Brain className="h-8 w-8 text-primary" />
                 </div>
-                <h4 className="font-bold text-xl">Data Science</h4>
+                <h4 className="font-bold text-xl">AI & LLMs</h4>
                 <p className="text-muted-foreground">
-                  Analyzing complex datasets and building predictive models to
-                  extract actionable insights.
+                  Building RAG systems, agent workflows, and ML pipelines that
+                  turn models into useful product features.
                 </p>
               </div>
             </div>
@@ -57,12 +56,12 @@ export const AboutSection = () => {
             <div className="bg-card p-8 rounded-2xl shadow-lg border-t-4 border-primary/50 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
               <div className="flex flex-col items-center text-center space-y-4">
                 <div className="p-4 rounded-2xl bg-primary/10 w-fit">
-                  <Smartphone className="h-8 w-8 text-primary" />
+                  <Layers className="h-8 w-8 text-primary" />
                 </div>
-                <h4 className="font-bold text-xl">Mobile Development</h4>
+                <h4 className="font-bold text-xl">Full-Stack Systems</h4>
                 <p className="text-muted-foreground">
-                  Building cross-platform mobile applications with
-                  professional-grade code and user-centric design.
+                  Shipping APIs, backends, and web apps that connect AI
+                  capabilities to real users and production workloads.
                 </p>
               </div>
             </div>
@@ -72,10 +71,10 @@ export const AboutSection = () => {
                 <div className="p-4 rounded-2xl bg-primary/10 w-fit">
                   <Briefcase className="h-8 w-8 text-primary" />
                 </div>
-                <h4 className="font-bold text-xl">Project Experience</h4>
+                <h4 className="font-bold text-xl">Product Delivery</h4>
                 <p className="text-muted-foreground">
-                  Delivering multiple successful projects with focus on quality,
-                  performance, and user satisfaction.
+                  Taking ideas from prototype to production with a focus on
+                  reliability, performance, and clear user outcomes.
                 </p>
               </div>
             </div>
@@ -87,9 +86,8 @@ export const AboutSection = () => {
               Get In Touch
             </a>
             <a
-              href="https://drive.google.com/drive/folders/1a8bLr6OSUUTC8awLUdhRC8aM0TTFCQE1?usp=drive_link"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/Wai-Yan-Min-Min-Resume.docx"
+              download="Wai-Yan-Min-Min-Resume.docx"
               className="px-6 py-3 rounded-full border-2 border-primary/50 text-primary hover:bg-primary/10 transition-all duration-300 hover:border-primary"
             >
               Download resume

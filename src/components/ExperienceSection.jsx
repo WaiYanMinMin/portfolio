@@ -5,9 +5,9 @@ import { MapPin, Calendar } from "lucide-react";
 
 const jobs = [
   {
-    role: "Frontend Developer",
-    company: "Mom&Pop (Thailand)",
-    period: "Dec 2023 – Feb 2024",
+    role: "Full-Stack Developer",
+    company: "Freelance",
+    period: "Feb 2026 – Present",
     remote: true,
   },
   {
@@ -17,12 +17,17 @@ const jobs = [
     remote: true,
   },
   {
-    role: "Junior Data Analyst",
+    role: "Full-Stack Developer",
     company: "Pixora Lab",
     period: "Jun 2024 – Jan 2025",
     remote: true,
   },
-  
+  {
+    role: "Frontend Developer",
+    company: "Mom&Pop (Thailand)",
+    period: "Dec 2023 – Feb 2024",
+    remote: true,
+  },
 ];
 
 const staggerDelays = [0.1, 0.25, 0.4, 0.55];
