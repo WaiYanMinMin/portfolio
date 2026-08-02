@@ -24,9 +24,9 @@ const projects = [
     id: 6,
     title: "GitHub Issue Analysis and Automation (n8n)",
     description:
-      "AI agent workflow that triages GitHub issues with Langchain templates, then routes notifications automatically. Deployed on Railway with Docker — a production LLM automation loop that cuts manual triage time.",
+      "AI agent workflow with LangChain prompts and multi-step orchestration: triage GitHub issues, then route email/messaging notifications via third-party APIs. Dockerized and deployed on Railway for production-style LLM automation.",
     image: "/projects/n8n.png",
-    tags: ["n8n", "Langchain", "LLMs", "Docker", "Railway"],
+    tags: ["n8n", "LangChain", "LLMs", "Agents", "Docker", "Railway"],
     githubUrl:
       "https://github.com/WaiYanMinMin/ai_github_automated_incident_report",
   },
@@ -52,9 +52,9 @@ const projects = [
     id: 4,
     title: "Resume Screening Backend",
     description:
-      "Full-stack AI screening system: FastAPI backend with NLP embeddings and clustering for PDF resume parsing, job-match scoring, skill extraction, and ranked shortlists.",
+      "Production-style AI screening with FastAPI: PDF parsing, embedding-based semantic matching, job-fit scoring, and ranked shortlists — focused on ranking quality beyond keyword search.",
     image: "/projects/resumescreening.png", // Add your image here
-    tags: ["Python", "FastAPI", "NLP", "Embeddings", "ML"],
+    tags: ["Python", "FastAPI", "Embeddings", "NLP", "RAG-style retrieval"],
     demoUrl: "https://golden-blancmange-c1cfb0.netlify.app/",
     githubUrl: "https://github.com/WaiYanMinMin/resume_screening_backend",
   },
@@ -105,9 +105,9 @@ export const ProjectsSection = () => {
           </h2>
           <div className="w-24 h-1 bg-primary mx-auto rounded-full mb-6"></div>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Featured work spanning LLM automation, ML backends, intelligent
-            dashboards, and full-stack apps — end-to-end systems that put AI
-            into real products.
+            Featured work spanning RAG-style document AI, LLM agents and
+            workflow orchestration, FastAPI backends, and full-stack apps —
+            production-minded systems that put AI into real products.
           </p>
         </div>
 

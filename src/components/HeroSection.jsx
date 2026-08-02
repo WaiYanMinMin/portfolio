@@ -25,8 +25,9 @@ export const HeroSection = () => {
 
             {/* Subtitle */}
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed opacity-0 animate-fade-in-delay-4 max-w-lg">
-              Full-Stack AI Engineer building end-to-end products — from LLM
-              agents and RAG systems to scalable APIs and polished web apps.
+              Full Stack AI Engineer owning features from idea to production —
+              React/TypeScript apps, Python & Node APIs, RAG pipelines, and LLM
+              agents that ship.
             </p>
 
             {/* Call-to-action buttons */}

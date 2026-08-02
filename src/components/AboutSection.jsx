@@ -18,22 +18,21 @@ export const AboutSection = () => {
           {/* Intro text */}
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <h3 className="text-3xl md:text-4xl font-bold">
-              Full-Stack AI Engineer
+              Full Stack AI Engineer
             </h3>
             <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
               <p>
-                I design and ship AI-powered products end to end , from LLM
-                workflows, RAG pipelines, and ML backends to the APIs and
-                interfaces users actually touch. My path spans frontend and
-                full-stack roles at Mom&Pop and Pixora Lab, Flutter product work
-                at Timeworld, and freelance work shipping AI systems into
-                production.
+                I own AI features from idea to production — React and TypeScript
+                frontends, Python/Node.js APIs, RAG pipelines, prompt refinement,
+                and agent workflows with tool calling and automation. My path
+                spans frontend and full-stack roles at Mom&Pop and Pixora Lab,
+                Flutter product work at Timeworld, and freelance delivery of
+                production systems for enterprise clients.
               </p>
               <p>
-                I work comfortably across Python, FastAPI, React, and modern
-                frontend stacks, and I care about reliable models, clean
-                architecture, and shipping features that hold up in the real
-                world — not just demos.
+                I work across FastAPI, React, Tailwind, and AWS, and I care about
+                AI quality, latency, reliability, and shipping features that hold
+                up in the real world — not just demos.
               </p>
             </div>
           </div>
@@ -47,8 +46,8 @@ export const AboutSection = () => {
                 </div>
                 <h4 className="font-bold text-xl">AI & LLMs</h4>
                 <p className="text-muted-foreground">
-                  Building RAG systems, agent workflows, and ML pipelines that
-                  turn models into useful product features.
+                  RAG pipelines, LLM agents with tool calling, prompt engineering,
+                  and orchestration that turn models into reliable product features.
                 </p>
               </div>
             </div>
